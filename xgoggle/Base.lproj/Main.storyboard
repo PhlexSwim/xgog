@@ -1,26 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ign-hH-CKb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Today's Workout-->
+        <scene sceneID="oT0-ja-IMZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="xgoggle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Today's Workout" id="m3I-R5-PBs" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="R5b-8c-qqw"/>
+                        <viewControllerLayoutGuide type="bottom" id="vcF-Gn-A89"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Ext-pT-AQu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Workout" id="FlB-nl-3wP"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7rI-4h-y7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="312" y="60"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="rb9-bJ-Kjg">
+            <objects>
+                <viewController title="Profile" id="pX3-8l-IrW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fGa-4y-qwY"/>
+                        <viewControllerLayoutGuide type="bottom" id="XD0-t3-olY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aDe-Yh-cEj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="OTT-Tm-rvv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNK-zJ-iss" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="754"/>
+        </scene>
+        <!--Workout Overview-->
+        <scene sceneID="M6i-lE-8Bq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaC-8h-P68" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Workout Overview" id="meA-qv-w2j" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kff-H2-Jff"/>
+                        <viewControllerLayoutGuide type="bottom" id="he6-gb-JPV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G4W-Ts-p81">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Overview" id="Xfy-8A-Wum"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="312" y="-601"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="od4-3S-aYX">
+            <objects>
+                <tabBarController id="Ign-hH-CKb" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="p5v-e0-Ch9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="meA-qv-w2j" kind="relationship" relationship="viewControllers" id="bAt-gQ-KsM"/>
+                        <segue destination="m3I-R5-PBs" kind="relationship" relationship="viewControllers" id="hvN-Nz-NUe"/>
+                        <segue destination="pX3-8l-IrW" kind="relationship" relationship="viewControllers" id="a81-8Y-vdw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJM-Zk-U1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-508" y="-271"/>
         </scene>
     </scenes>
 </document>
