@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		825388B56A82BEEE18C722C7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A68C6830F33AD27E4B90EA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9FE06B4D1CB65D9F006B9B1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE06B4C1CB65D9F006B9B1A /* AppDelegate.swift */; };
 		9FE06B4F1CB65D9F006B9B1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE06B4E1CB65D9F006B9B1A /* ViewController.swift */; };
 		9FE06B521CB65D9F006B9B1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE06B501CB65D9F006B9B1A /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		9FE06B571CB65D9F006B9B1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE06B551CB65D9F006B9B1A /* LaunchScreen.storyboard */; };
 		9FE06B621CB65D9F006B9B1A /* xgoggleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE06B611CB65D9F006B9B1A /* xgoggleTests.swift */; };
 		9FE06B6D1CB65D9F006B9B1A /* xgoggleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE06B6C1CB65D9F006B9B1A /* xgoggleUITests.swift */; };
+		9FE06B7B1CB66979006B9B1A /* view.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FE06B7A1CB66979006B9B1A /* view.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5522D98295F1EF47AAC7B34D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9FE06B491CB65D9F006B9B1A /* xgoggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xgoggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE06B4C1CB65D9F006B9B1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FE06B4E1CB65D9F006B9B1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		9FE06B681CB65D9F006B9B1A /* xgoggleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xgoggleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE06B6C1CB65D9F006B9B1A /* xgoggleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xgoggleUITests.swift; sourceTree = "<group>"; };
 		9FE06B6E1CB65D9F006B9B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FE06B7A1CB66979006B9B1A /* view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view.png; sourceTree = "<group>"; };
+		F7A68C6830F33AD27E4B90EA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE4D6E8DFF200754D920F6F5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				825388B56A82BEEE18C722C7 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26C1845FD9186920AB09CACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7A68C6830F33AD27E4B90EA /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9FE06B401CB65D9F006B9B1A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +96,8 @@
 				9FE06B601CB65D9F006B9B1A /* xgoggleTests */,
 				9FE06B6B1CB65D9F006B9B1A /* xgoggleUITests */,
 				9FE06B4A1CB65D9F006B9B1A /* Products */,
+				C5C758495E208A2A45EE0629 /* Pods */,
+				26C1845FD9186920AB09CACC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +116,7 @@
 			children = (
 				9FE06B4C1CB65D9F006B9B1A /* AppDelegate.swift */,
 				9FE06B4E1CB65D9F006B9B1A /* ViewController.swift */,
+				9FE06B7A1CB66979006B9B1A /* view.png */,
 				9FE06B501CB65D9F006B9B1A /* Main.storyboard */,
 				9FE06B531CB65D9F006B9B1A /* Assets.xcassets */,
 				9FE06B551CB65D9F006B9B1A /* LaunchScreen.storyboard */,
@@ -125,6 +143,15 @@
 			path = xgoggleUITests;
 			sourceTree = "<group>";
 		};
+		C5C758495E208A2A45EE0629 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE4D6E8DFF200754D920F6F5 /* Pods.debug.xcconfig */,
+				5522D98295F1EF47AAC7B34D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FE06B711CB65D9F006B9B1A /* Build configuration list for PBXNativeTarget "xgoggle" */;
 			buildPhases = (
+				8DF0F734829EAB73A9B626A8 /* Check Pods Manifest.lock */,
 				9FE06B451CB65D9F006B9B1A /* Sources */,
 				9FE06B461CB65D9F006B9B1A /* Frameworks */,
 				9FE06B471CB65D9F006B9B1A /* Resources */,
+				7C9723250EFA425824627200 /* Embed Pods Frameworks */,
+				7AFC3CC57022FD18D464F26F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +217,7 @@
 		9FE06B411CB65D9F006B9B1A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "David Fontenot";
 				TargetAttributes = {
@@ -231,6 +262,7 @@
 				9FE06B571CB65D9F006B9B1A /* LaunchScreen.storyboard in Resources */,
 				9FE06B541CB65D9F006B9B1A /* Assets.xcassets in Resources */,
 				9FE06B521CB65D9F006B9B1A /* Main.storyboard in Resources */,
+				9FE06B7B1CB66979006B9B1A /* view.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +281,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7AFC3CC57022FD18D464F26F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C9723250EFA425824627200 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DF0F734829EAB73A9B626A8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9FE06B451CB65D9F006B9B1A /* Sources */ = {
@@ -396,6 +476,7 @@
 		};
 		9FE06B721CB65D9F006B9B1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE4D6E8DFF200754D920F6F5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = xgoggle/Info.plist;
@@ -407,6 +488,7 @@
 		};
 		9FE06B731CB65D9F006B9B1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5522D98295F1EF47AAC7B34D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = xgoggle/Info.plist;
@@ -483,6 +565,7 @@
 				9FE06B731CB65D9F006B9B1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9FE06B741CB65D9F006B9B1A /* Build configuration list for PBXNativeTarget "xgoggleTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +574,7 @@
 				9FE06B761CB65D9F006B9B1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9FE06B771CB65D9F006B9B1A /* Build configuration list for PBXNativeTarget "xgoggleUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +583,7 @@
 				9FE06B791CB65D9F006B9B1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
