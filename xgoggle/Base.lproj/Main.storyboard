@@ -47,7 +47,7 @@
         <!--Workout Overview-->
         <scene sceneID="M6i-lE-8Bq">
             <objects>
-                <viewController title="Workout Overview" id="meA-qv-w2j" sceneMemberID="viewController">
+                <viewController title="Workout Overview" id="meA-qv-w2j" customClass="ViewController" customModule="xgoggle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kff-H2-Jff"/>
                         <viewControllerLayoutGuide type="bottom" id="he6-gb-JPV"/>
@@ -55,20 +55,8 @@
                     <view key="view" contentMode="scaleToFill" id="G4W-Ts-p81">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="view.png" translatesAutoresizingMaskIntoConstraints="NO" id="hB5-0H-8Qy">
-                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
-                                <animations/>
-                            </imageView>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="hB5-0H-8Qy" firstAttribute="leading" secondItem="G4W-Ts-p81" secondAttribute="leading" id="DOW-Bu-Raq"/>
-                            <constraint firstAttribute="trailing" secondItem="hB5-0H-8Qy" secondAttribute="trailing" id="DaF-pL-KIE"/>
-                            <constraint firstItem="he6-gb-JPV" firstAttribute="top" secondItem="hB5-0H-8Qy" secondAttribute="bottom" id="RmP-bx-9PG"/>
-                            <constraint firstItem="hB5-0H-8Qy" firstAttribute="top" secondItem="kff-H2-Jff" secondAttribute="bottom" id="t9O-uK-bY5"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" id="Xfy-8A-Wum"/>
                 </viewController>
@@ -97,7 +85,4 @@
             <point key="canvasLocation" x="-508" y="-271"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="view.png" width="404" height="694"/>
-    </resources>
 </document>
