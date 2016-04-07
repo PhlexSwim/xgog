@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         )
 
         let chart = LineChart(
-            frame: CGRectMake(0, 70, 300, 500),
+            frame: CGRectMake(0, 70, 300, 240),
             chartConfig: chartConfig,
             xTitle: "Time",
             yTitle: "Heart Rate",
