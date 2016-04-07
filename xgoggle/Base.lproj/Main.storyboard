@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ign-hH-CKb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Today's Workout-->
@@ -56,8 +57,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Workout Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efh-kK-YYN">
-                                <rect key="frame" x="10" y="30" width="580" height="189"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efh-kK-YYN">
+                                <rect key="frame" x="10" y="30" width="580" height="25"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="JFe-j7-elF"/>
@@ -66,27 +67,41 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="LineGraphView" translatesAutoresizingMaskIntoConstraints="NO" id="Uuy-ho-csD" userLabel="LineGraphView">
-                                <rect key="frame" x="10" y="541" width="580" height="0.0"/>
+                            <view contentMode="scaleToFill" restorationIdentifier="LineGraphView" translatesAutoresizingMaskIntoConstraints="NO" id="Uuy-ho-csD" userLabel="LineGraphView">
+                                <rect key="frame" x="10" y="55" width="580" height="166.5"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="PieChartView" translatesAutoresizingMaskIntoConstraints="NO" id="f3p-dR-C86" userLabel="PieChartView" customClass="ARPieChart" customModule="xgoggle" customModuleProvider="target">
+                                <rect key="frame" x="10" y="231.5" width="580" height="309.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f3p-dR-C86" secondAttribute="height" multiplier="15:8" id="HcW-Gf-fzg" userLabel="aspect = 1:1"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Uuy-ho-csD" firstAttribute="leading" secondItem="G4W-Ts-p81" secondAttribute="leading" constant="10" id="24Y-j3-06p"/>
+                            <constraint firstItem="f3p-dR-C86" firstAttribute="top" secondItem="Uuy-ho-csD" secondAttribute="bottom" constant="10" id="Hm1-PT-7Sr"/>
                             <constraint firstItem="Uuy-ho-csD" firstAttribute="top" secondItem="Efh-kK-YYN" secondAttribute="bottom" id="IfQ-8i-xTM"/>
+                            <constraint firstItem="he6-gb-JPV" firstAttribute="top" secondItem="f3p-dR-C86" secondAttribute="bottom" constant="10" id="Nls-dX-s78"/>
+                            <constraint firstItem="he6-gb-JPV" firstAttribute="top" secondItem="f3p-dR-C86" secondAttribute="bottom" constant="10" id="PaK-js-uj7"/>
+                            <constraint firstItem="f3p-dR-C86" firstAttribute="leading" secondItem="G4W-Ts-p81" secondAttribute="leading" constant="10" id="TJt-FF-vr1"/>
                             <constraint firstAttribute="trailing" secondItem="Uuy-ho-csD" secondAttribute="trailing" constant="10" id="U8Z-M6-vXa"/>
                             <constraint firstAttribute="trailing" secondItem="Efh-kK-YYN" secondAttribute="trailing" constant="10" id="V4k-lp-yrb"/>
                             <constraint firstItem="Efh-kK-YYN" firstAttribute="top" secondItem="kff-H2-Jff" secondAttribute="bottom" constant="10" id="VNc-aD-Fpo"/>
+                            <constraint firstItem="f3p-dR-C86" firstAttribute="top" secondItem="Uuy-ho-csD" secondAttribute="bottom" constant="10" id="WRB-WQ-2cs"/>
                             <constraint firstItem="Efh-kK-YYN" firstAttribute="leading" secondItem="G4W-Ts-p81" secondAttribute="leading" constant="10" id="dwg-qE-INl"/>
-                            <constraint firstItem="he6-gb-JPV" firstAttribute="top" secondItem="Uuy-ho-csD" secondAttribute="bottom" constant="10" id="n9E-eu-g0a"/>
+                            <constraint firstAttribute="trailing" secondItem="f3p-dR-C86" secondAttribute="trailing" constant="10" id="hRr-9E-aMI"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" id="Xfy-8A-Wum"/>
                     <connections>
                         <outlet property="LineGraphView" destination="Uuy-ho-csD" id="Ql5-Rx-am5"/>
+                        <outlet property="PieChartView" destination="f3p-dR-C86" id="Hwp-UY-ucH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaC-8h-P68" userLabel="First Responder" sceneMemberID="firstResponder"/>
