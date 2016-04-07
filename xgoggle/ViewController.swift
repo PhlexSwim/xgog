@@ -11,6 +11,7 @@ import SwiftCharts
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var LineGraphView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,9 +19,10 @@ class ViewController: UIViewController {
             xAxisConfig: ChartAxisConfig(from: 2, to: 14, by: 2),
             yAxisConfig: ChartAxisConfig(from: 0, to: 14, by: 2)
         )
+        print(LineGraphView.frame.origin)
 
         let chart = LineChart(
-            frame: CGRectMake(0, 70, 300, 240),
+            frame: CGRectMake(0, 0, 300, 240),
             chartConfig: chartConfig,
             xTitle: "Time",
             yTitle: "Heart Rate",
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
             ]
         )
 
-        self.view.addSubview(chart.view)
+        self.LineGraphView.addSubview(chart.view)
     }
 
     override func didReceiveMemoryWarning() {
