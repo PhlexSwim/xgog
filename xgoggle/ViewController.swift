@@ -30,8 +30,8 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-
-
+        
+        
 
 
         //Pie Chart
@@ -42,7 +42,7 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         PieChartView2.delegate = self
         PieChartView2.dataSource = self
         PieChartView2.showDescriptionText = true
-
+        
         // Random Default Value
         let defaultItemCount = randomInteger(1, upper: 10)
         for _ in 1...defaultItemCount {
@@ -60,15 +60,16 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         PieChartView.reloadData()
         PieChartView2.reloadData()
     }
-
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         //Line Graph Chart
+        //**might need to start by removing the old chart subview from the linegraphview parent first
         let chartConfig = ChartConfigXY(
             xAxisConfig: ChartAxisConfig(from: 2, to: 14, by: 2),
             yAxisConfig: ChartAxisConfig(from: 0, to: 14, by: 2)
         )
-
+        
         let chart = LineChart(
             //this is a problem bc im setting height and width manually here
             frame: CGRectMake(10, 10, self.LineGraphView.frame.width-20, self.LineGraphView.frame.height-20),
@@ -87,7 +88,7 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         print(LineGraphView.frame)
     }
 
-    //Random Functions
+    //Random Functions -- **should probably move this to its own file
 
     func randomColor() -> UIColor {
         let randomR: CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
@@ -107,7 +108,8 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         return PieChartItem(value: value, color: color, description: description)
     }
 
-    // #Pie Chart implementation
+    // #Pie Chart implementation -- **should probably move this to its own file
+    // **watch out for aspect ratio thingymabob for pie charts when we go to resize them
     /**
     *  MARK: ARPieChartDelegate
     */
