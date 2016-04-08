@@ -1,0 +1,6 @@
+framework module Pods_xgoggleTests {
+  umbrella header "Pods-xgoggleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
