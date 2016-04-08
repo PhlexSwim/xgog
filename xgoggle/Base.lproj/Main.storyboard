@@ -57,6 +57,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="LineGraphView" translatesAutoresizingMaskIntoConstraints="NO" id="Uuy-ho-csD" userLabel="LineGraphView">
+                                <rect key="frame" x="10" y="65" width="580" height="233"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efh-kK-YYN">
                                 <rect key="frame" x="10" y="30" width="580" height="25"/>
                                 <animations/>
@@ -67,73 +72,87 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" restorationIdentifier="LineGraphView" translatesAutoresizingMaskIntoConstraints="NO" id="Uuy-ho-csD" userLabel="LineGraphView">
-                                <rect key="frame" x="10" y="55" width="580" height="162.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUn-QA-jzE" userLabel="BottomHalfView">
+                                <rect key="frame" x="10" y="308" width="580" height="233"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" restorationIdentifier="PieChartView" translatesAutoresizingMaskIntoConstraints="NO" id="f3p-dR-C86" userLabel="PieChartView" customClass="ARPieChart" customModule="xgoggle" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10.5" width="275" height="101.5"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="f3p-dR-C86" secondAttribute="height" multiplier="15:8" id="HcW-Gf-fzg" userLabel="aspect = 1:1"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="HcW-Gf-fzg"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W80-F0-3rL" userLabel="PieChartView2" customClass="ARPieChart" customModule="xgoggle" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="121.5" width="275" height="101.5"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB8-Vf-AzL" userLabel="LabelsView1">
+                                        <rect key="frame" x="295" y="10" width="275" height="101.5"/>
+                                        <animations/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5F1-wS-A0J" userLabel="LabelsView2">
+                                        <rect key="frame" x="295" y="121.5" width="275" height="101.5"/>
+                                        <animations/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    </view>
+                                </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB8-Vf-AzL" userLabel="LabelsView1">
-                                <rect key="frame" x="305" y="227.5" width="285" height="152"/>
-                                <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W80-F0-3rL" userLabel="PieChartView2" customClass="ARPieChart" customModule="xgoggle" customModuleProvider="target">
-                                <rect key="frame" x="10" y="389" width="285" height="152"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5F1-wS-A0J" userLabel="LabelsView2">
-                                <rect key="frame" x="305" y="389.5" width="285" height="151.5"/>
-                                <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" restorationIdentifier="PieChartView" translatesAutoresizingMaskIntoConstraints="NO" id="f3p-dR-C86" userLabel="PieChartView" customClass="ARPieChart" customModule="xgoggle" customModuleProvider="target">
-                                <rect key="frame" x="10" y="227" width="285" height="152"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="f3p-dR-C86" secondAttribute="height" multiplier="15:8" id="HcW-Gf-fzg" userLabel="aspect = 1:1"/>
+                                    <constraint firstItem="f3p-dR-C86" firstAttribute="height" secondItem="W80-F0-3rL" secondAttribute="height" id="4So-Ag-4Sc"/>
+                                    <constraint firstItem="TB8-Vf-AzL" firstAttribute="top" secondItem="lUn-QA-jzE" secondAttribute="top" constant="10" id="4YY-s2-jV6"/>
+                                    <constraint firstAttribute="bottom" secondItem="5F1-wS-A0J" secondAttribute="bottom" constant="10" id="AJi-LZ-wUh"/>
+                                    <constraint firstItem="W80-F0-3rL" firstAttribute="top" secondItem="f3p-dR-C86" secondAttribute="bottom" constant="10" id="ANr-ja-toT"/>
+                                    <constraint firstAttribute="bottom" secondItem="W80-F0-3rL" secondAttribute="bottom" constant="10" id="BVf-tm-IYo"/>
+                                    <constraint firstAttribute="trailing" secondItem="5F1-wS-A0J" secondAttribute="trailing" constant="10" id="D7X-GL-ZAW"/>
+                                    <constraint firstItem="TB8-Vf-AzL" firstAttribute="height" secondItem="5F1-wS-A0J" secondAttribute="height" id="Ejh-le-A0e"/>
+                                    <constraint firstAttribute="bottom" secondItem="W80-F0-3rL" secondAttribute="bottom" constant="10" id="J9J-ee-x3o"/>
+                                    <constraint firstItem="5F1-wS-A0J" firstAttribute="top" secondItem="TB8-Vf-AzL" secondAttribute="bottom" constant="10" id="RpM-fb-Nhj"/>
+                                    <constraint firstItem="f3p-dR-C86" firstAttribute="width" secondItem="TB8-Vf-AzL" secondAttribute="width" id="T7e-Bc-58i"/>
+                                    <constraint firstItem="W80-F0-3rL" firstAttribute="leading" secondItem="lUn-QA-jzE" secondAttribute="leading" constant="10" id="UAr-GE-3IB"/>
+                                    <constraint firstItem="W80-F0-3rL" firstAttribute="width" secondItem="5F1-wS-A0J" secondAttribute="width" id="XM3-32-rZ7"/>
+                                    <constraint firstItem="W80-F0-3rL" firstAttribute="leading" secondItem="lUn-QA-jzE" secondAttribute="leading" constant="10" id="ZRa-3c-99S"/>
+                                    <constraint firstItem="5F1-wS-A0J" firstAttribute="leading" secondItem="W80-F0-3rL" secondAttribute="trailing" constant="10" id="aYE-cX-BWM"/>
+                                    <constraint firstItem="TB8-Vf-AzL" firstAttribute="leading" secondItem="f3p-dR-C86" secondAttribute="trailing" constant="10" id="cM2-ae-qdQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="TB8-Vf-AzL" secondAttribute="trailing" constant="10" id="cSI-Ff-OmO"/>
+                                    <constraint firstItem="f3p-dR-C86" firstAttribute="top" secondItem="lUn-QA-jzE" secondAttribute="top" constant="10" id="d76-F6-Imn"/>
+                                    <constraint firstItem="f3p-dR-C86" firstAttribute="leading" secondItem="lUn-QA-jzE" secondAttribute="leading" constant="10" id="rKL-hb-bxM"/>
+                                    <constraint firstItem="5F1-wS-A0J" firstAttribute="leading" secondItem="W80-F0-3rL" secondAttribute="trailing" constant="10" id="sMU-ed-OEi"/>
+                                    <constraint firstItem="W80-F0-3rL" firstAttribute="top" secondItem="f3p-dR-C86" secondAttribute="bottom" constant="10" id="xIg-mW-5Em"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ANr-ja-toT"/>
+                                        <exclude reference="J9J-ee-x3o"/>
+                                        <exclude reference="ZRa-3c-99S"/>
+                                        <exclude reference="aYE-cX-BWM"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TB8-Vf-AzL" firstAttribute="width" secondItem="f3p-dR-C86" secondAttribute="width" id="04D-32-r8f"/>
                             <constraint firstItem="Uuy-ho-csD" firstAttribute="leading" secondItem="G4W-Ts-p81" secondAttribute="leading" constant="10" id="24Y-j3-06p"/>
-                            <constraint firstItem="5F1-wS-A0J" firstAttribute="top" secondItem="TB8-Vf-AzL" secondAttribute="bottom" constant="10" id="2xn-AK-vSm"/>
-                            <constraint firstItem="TB8-Vf-AzL" firstAttribute="leading" secondItem="f3p-dR-C86" secondAttribute="trailing" constant="10" id="C08-Nq-rmk"/>
-                            <constraint firstItem="TB8-Vf-AzL" firstAttribute="height" secondItem="5F1-wS-A0J" secondAttribute="height" id="EpO-5d-ILE"/>
-                            <constraint firstItem="he6-gb-JPV" firstAttribute="top" secondItem="TB8-Vf-AzL" secondAttribute="bottom" constant="10" id="Fpi-de-t6C"/>
-                            <constraint firstAttribute="trailing" secondItem="TB8-Vf-AzL" secondAttribute="trailing" constant="10" id="Fur-dT-gkP"/>
-                            <constraint firstItem="f3p-dR-C86" firstAttribute="top" secondItem="Uuy-ho-csD" secondAttribute="bottom" constant="10" id="Hm1-PT-7Sr"/>
-                            <constraint firstItem="Uuy-ho-csD" firstAttribute="top" secondItem="Efh-kK-YYN" secondAttribute="bottom" id="IfQ-8i-xTM"/>
-                            <constraint firstItem="TB8-Vf-AzL" firstAttribute="top" secondItem="Uuy-ho-csD" secondAttribute="bottom" constant="10" id="Jug-vj-pH0"/>
-                            <constraint firstItem="W80-F0-3rL" firstAttribute="height" secondItem="f3p-dR-C86" secondAttribute="height" id="Mnu-cW-Ni4"/>
-                            <constraint firstItem="he6-gb-JPV" firstAttribute="top" secondItem="f3p-dR-C86" secondAttribute="bottom" constant="10" id="Nls-dX-s78"/>
-                            <constraint firstItem="he6-gb-JPV" firstAttribute="top" secondItem="f3p-dR-C86" secondAttribute="bottom" constant="10" id="PaK-js-uj7"/>
-                            <constraint firstItem="he6-gb-JPV" firstAttribute="top" secondItem="W80-F0-3rL" secondAttribute="bottom" constant="10" id="Rkk-Im-ttK"/>
-                            <constraint firstItem="f3p-dR-C86" firstAttribute="leading" secondItem="G4W-Ts-p81" secondAttribute="leading" constant="10" id="TJt-FF-vr1"/>
+                            <constraint firstItem="lUn-QA-jzE" firstAttribute="top" secondItem="Uuy-ho-csD" secondAttribute="bottom" constant="10" id="Huu-mf-DB3"/>
+                            <constraint firstItem="Uuy-ho-csD" firstAttribute="top" secondItem="Efh-kK-YYN" secondAttribute="bottom" constant="10" id="IfQ-8i-xTM"/>
+                            <constraint firstItem="lUn-QA-jzE" firstAttribute="height" secondItem="Uuy-ho-csD" secondAttribute="height" id="IiY-ge-vxw"/>
                             <constraint firstAttribute="trailing" secondItem="Uuy-ho-csD" secondAttribute="trailing" constant="10" id="U8Z-M6-vXa"/>
                             <constraint firstAttribute="trailing" secondItem="Efh-kK-YYN" secondAttribute="trailing" constant="10" id="V4k-lp-yrb"/>
                             <constraint firstItem="Efh-kK-YYN" firstAttribute="top" secondItem="kff-H2-Jff" secondAttribute="bottom" constant="10" id="VNc-aD-Fpo"/>
-                            <constraint firstItem="W80-F0-3rL" firstAttribute="leading" secondItem="G4W-Ts-p81" secondAttribute="leading" constant="10" id="XiL-bM-9h4"/>
-                            <constraint firstItem="5F1-wS-A0J" firstAttribute="leading" secondItem="W80-F0-3rL" secondAttribute="trailing" constant="10" id="ZFG-KJ-Q9j"/>
-                            <constraint firstItem="W80-F0-3rL" firstAttribute="width" secondItem="f3p-dR-C86" secondAttribute="width" id="Zjp-6F-uh3"/>
+                            <constraint firstItem="he6-gb-JPV" firstAttribute="top" secondItem="lUn-QA-jzE" secondAttribute="bottom" constant="10" id="XON-KP-R67"/>
+                            <constraint firstItem="lUn-QA-jzE" firstAttribute="leading" secondItem="G4W-Ts-p81" secondAttribute="leading" constant="10" id="ZA7-U6-K9m"/>
                             <constraint firstItem="Efh-kK-YYN" firstAttribute="leading" secondItem="G4W-Ts-p81" secondAttribute="leading" constant="10" id="dwg-qE-INl"/>
-                            <constraint firstAttribute="trailing" secondItem="5F1-wS-A0J" secondAttribute="trailing" constant="10" id="hFu-E0-BW7"/>
-                            <constraint firstItem="W80-F0-3rL" firstAttribute="top" secondItem="f3p-dR-C86" secondAttribute="bottom" constant="10" id="hKc-Nu-0uj"/>
-                            <constraint firstAttribute="trailing" secondItem="f3p-dR-C86" secondAttribute="trailing" constant="10" id="hRr-9E-aMI"/>
-                            <constraint firstItem="he6-gb-JPV" firstAttribute="top" secondItem="5F1-wS-A0J" secondAttribute="bottom" constant="10" id="k4d-Rd-UB8"/>
+                            <constraint firstAttribute="trailing" secondItem="lUn-QA-jzE" secondAttribute="trailing" constant="10" id="kk6-oH-qqo"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="hRr-9E-aMI"/>
-                                <exclude reference="Fpi-de-t6C"/>
-                                <exclude reference="Nls-dX-s78"/>
-                                <exclude reference="PaK-js-uj7"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" id="Xfy-8A-Wum"/>
                     <connections>
