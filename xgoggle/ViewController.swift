@@ -14,6 +14,8 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     @IBOutlet weak var PieChartView: ARPieChart!
     @IBOutlet weak var LineGraphView: UIView!
 
+    private var chart: Chart?
+
     internal var outerRadius: CGFloat = 0.0
     internal var innerRadius: CGFloat = 0.0
     internal var selectedPieOffset: CGFloat = 0.0
@@ -43,6 +45,7 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
                 (chartPoints: [(2.0, 2.6), (4.2, 4.1), (7.3, 1.0), (8.1, 11.5), (14.0, 3.0)], color: UIColor.blueColor())
             ]
         )
+        self.chart = chart
 
         self.LineGraphView.addSubview(chart.view)
 
