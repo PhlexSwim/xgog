@@ -95,13 +95,39 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB8-Vf-AzL" userLabel="LabelsView1">
                                         <rect key="frame" x="295" y="0.0" width="285" height="111.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shit will go here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OE-09-7kz">
+                                                <rect key="frame" x="41" y="45" width="122" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <animations/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="7OE-09-7kz" firstAttribute="centerY" secondItem="TB8-Vf-AzL" secondAttribute="centerY" id="S9j-nQ-Bx0"/>
+                                            <constraint firstItem="7OE-09-7kz" firstAttribute="centerX" secondItem="TB8-Vf-AzL" secondAttribute="centerX" id="lmZ-EH-A3f"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5F1-wS-A0J" userLabel="LabelsView2">
                                         <rect key="frame" x="295" y="121.5" width="285" height="111.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shit will go here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zw-Oy-uBY">
+                                                <rect key="frame" x="41" y="45" width="122" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <animations/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="4Zw-Oy-uBY" firstAttribute="centerX" secondItem="5F1-wS-A0J" secondAttribute="centerX" id="CUH-ig-FpS"/>
+                                            <constraint firstItem="4Zw-Oy-uBY" firstAttribute="centerY" secondItem="5F1-wS-A0J" secondAttribute="centerY" id="cRA-fY-L8a"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <animations/>
