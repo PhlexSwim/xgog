@@ -6,6 +6,8 @@
 //  Copyright © 2016 David Fontenot. All rights reserved.
 //
 
+//hi luke how's it going
+
 import UIKit
 import SwiftCharts
 
