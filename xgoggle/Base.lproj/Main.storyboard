@@ -77,7 +77,7 @@
                                 <animations/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W80-F0-3rL" userLabel="PieChartView2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W80-F0-3rL" userLabel="PieChartView2" customClass="ARPieChart" customModule="xgoggle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="389" width="285" height="152"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -139,6 +139,7 @@
                     <connections>
                         <outlet property="LineGraphView" destination="Uuy-ho-csD" id="Ql5-Rx-am5"/>
                         <outlet property="PieChartView" destination="f3p-dR-C86" id="Hwp-UY-ucH"/>
+                        <outlet property="PieChartView2" destination="W80-F0-3rL" id="LcN-pE-YRd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaC-8h-P68" userLabel="First Responder" sceneMemberID="firstResponder"/>

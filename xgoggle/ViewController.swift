@@ -12,6 +12,7 @@ import SwiftCharts
 class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource {
 
     @IBOutlet weak var PieChartView: ARPieChart!
+    @IBOutlet weak var PieChartView2: ARPieChart!
     @IBOutlet weak var LineGraphView: UIView!
 
     private var chart: Chart?
@@ -54,6 +55,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         PieChartView.dataSource = self
         PieChartView.showDescriptionText = true
 
+        PieChartView2.delegate = self
+        PieChartView2.dataSource = self
+        PieChartView2.showDescriptionText = true
+
         // Random Default Value
         let defaultItemCount = randomInteger(1, upper: 10)
         for _ in 1...defaultItemCount {
@@ -69,6 +74,7 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         PieChartView.reloadData()
+        PieChartView2.reloadData()
     }
 
     //Random Functions
