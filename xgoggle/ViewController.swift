@@ -71,7 +71,7 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
 
         let chart = LineChart(
             //this is a problem bc im setting height and width manually here
-            frame: CGRectMake(10, 10, self.LineGraphView.frame.width-20, 260),
+            frame: CGRectMake(10, 10, self.LineGraphView.frame.width-20, self.LineGraphView.frame.height-20),
             //frame: CGRectMake(0, 0, self.LineGraphView.frame.width, self.LineGraphView.frame.height),
             chartConfig: chartConfig,
             xTitle: "Time",
