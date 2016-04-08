@@ -29,26 +29,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //Line Graph Chart
-        let chartConfig = ChartConfigXY(
-            xAxisConfig: ChartAxisConfig(from: 2, to: 14, by: 2),
-            yAxisConfig: ChartAxisConfig(from: 0, to: 14, by: 2)
-        )
-        print(LineGraphView.frame.origin)
 
-        let chart = LineChart(
-            frame: CGRectMake(0, 0, 300, 240),
-            chartConfig: chartConfig,
-            xTitle: "Time",
-            yTitle: "Heart Rate",
-            lines: [
-                (chartPoints: [(2.0, 10.6), (4.2, 5.1), (7.3, 3.0), (8.1, 5.5), (14.0, 8.0)], color: UIColor.redColor()),
-                (chartPoints: [(2.0, 2.6), (4.2, 4.1), (7.3, 1.0), (8.1, 11.5), (14.0, 3.0)], color: UIColor.blueColor())
-            ]
-        )
-        self.chart = chart
 
-        self.LineGraphView.addSubview(chart.view)
+
+
 
         //Pie Chart
         PieChartView.delegate = self
@@ -75,6 +59,32 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         super.viewDidAppear(animated)
         PieChartView.reloadData()
         PieChartView2.reloadData()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        //Line Graph Chart
+        let chartConfig = ChartConfigXY(
+            xAxisConfig: ChartAxisConfig(from: 2, to: 14, by: 2),
+            yAxisConfig: ChartAxisConfig(from: 0, to: 14, by: 2)
+        )
+
+        let chart = LineChart(
+            //this is a problem bc im setting height and width manually here
+            frame: CGRectMake(10, 10, self.LineGraphView.frame.width-20, 260),
+            //frame: CGRectMake(0, 0, self.LineGraphView.frame.width, self.LineGraphView.frame.height),
+            chartConfig: chartConfig,
+            xTitle: "Time",
+            yTitle: "Heart Rate",
+            lines: [
+                (chartPoints: [(2.0, 10.6), (4.2, 5.1), (7.3, 3.0), (8.1, 5.5), (14.0, 8.0)], color: UIColor.redColor()),
+                (chartPoints: [(2.0, 2.6), (4.2, 4.1), (7.3, 1.0), (8.1, 11.5), (14.0, 3.0)], color: UIColor.blueColor())
+            ]
+        )
+        self.chart = chart
+        self.LineGraphView.addSubview(chart.view)
+        //self.LineGraphView.frame = CGRectMake(self.LineGraphView.frame.origin.x, self.LineGraphView.frame.origin.y, self.LineGraphView.frame.width, chart.frame.height)
+        print(LineGraphView.frame)
     }
 
     //Random Functions
