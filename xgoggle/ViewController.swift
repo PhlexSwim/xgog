@@ -67,7 +67,16 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         super.viewDidLayoutSubviews()
         //Line Graph Chart
         //**might need to start by removing the old chart subview from the linegraphview parent first
+        let chartSettings = ChartSettings()
+        chartSettings.leading = 10
+        chartSettings.top = 10
+        chartSettings.trailing = 10
+        chartSettings.bottom = 10
         let chartConfig = ChartConfigXY(
+            //**fit ends of graph
+            //ChartSettings.top: 20,
+            //ChartSettings.trailing: 20
+            chartSettings: chartSettings,
             xAxisConfig: ChartAxisConfig(from: 2, to: 14, by: 2),
             yAxisConfig: ChartAxisConfig(from: 0, to: 14, by: 2)
         )
