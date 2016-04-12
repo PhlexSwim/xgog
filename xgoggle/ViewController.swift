@@ -65,6 +65,8 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        //****janky fix bc if it takes too long to run it will even remove the chart we want
+        self.LineGraphView.subviews.forEach({ $0.removeFromSuperview() })
         //Line Graph Chart
         //**might need to start by removing the old chart subview from the linegraphview parent first
         let chartSettings = ChartSettings()
