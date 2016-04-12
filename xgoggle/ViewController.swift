@@ -32,10 +32,6 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        
-        
-
-
         //Pie Chart
         PieChartView.delegate = self
         PieChartView.dataSource = self
