@@ -46,7 +46,8 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         //need to calculate width and height of parent view to determine center point
         let circleX = view.frame.width / 2
         let circleY = view.frame.height / 2
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: circleX,y: circleY), radius: CGFloat(10), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+        //let radius = view.frame.width / 2
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: circleX,y: circleY), radius: CGFloat(0.5*circleX), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
 
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = circlePath.CGPath
