@@ -32,6 +32,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        setupPieChart()
+    }
+
+    func setupPieChart() {
         //Pie Chart
         PieChartView.delegate = self
         PieChartView.dataSource = self
@@ -61,6 +65,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        setupLineChart()
+    }
+
+    func setupLineChart() {
         //****janky fix bc if it takes too long to run it will even remove the chart we want
         self.LineGraphView.subviews.forEach({ $0.removeFromSuperview() })
         //Line Graph Chart
