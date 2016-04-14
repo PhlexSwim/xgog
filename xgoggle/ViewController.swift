@@ -53,7 +53,7 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         shapeLayer.path = circlePath.CGPath
 
         //change the fill color
-        shapeLayer.fillColor = UIColor.clearColor().CGColor
+        shapeLayer.fillColor = color.CGColor
         //you can change the stroke color
         shapeLayer.strokeColor = UIColor.redColor().CGColor
         //you can change the line width
