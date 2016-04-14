@@ -17,6 +17,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     @IBOutlet weak var PieChartView2: ARPieChart!
     @IBOutlet weak var LineGraphView: UIView!
 
+    @IBOutlet weak var pieChartCircleView11: UIView!
+
+
+
     private var chart: Chart?
 
     internal var outerRadius: CGFloat = 0.0
@@ -32,7 +36,28 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        //might want to also do this in viewDidLayoutSubviews
         setupPieChart()
+
+        makeCircleOnView(pieChartCircleView11, color: UIColor.redColor())
+    }
+
+    func makeCircleOnView(view: UIView, color: UIColor) {
+        //need to calculate width and height of parent view to determine center point
+
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 0,y: 0), radius: CGFloat(10), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.CGPath
+
+        //change the fill color
+        shapeLayer.fillColor = UIColor.clearColor().CGColor
+        //you can change the stroke color
+        shapeLayer.strokeColor = UIColor.redColor().CGColor
+        //you can change the line width
+        shapeLayer.lineWidth = 3.0
+
+        pieChartCircleView11.layer.addSublayer(shapeLayer)
     }
 
     func setupPieChart() {
