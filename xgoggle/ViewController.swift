@@ -17,8 +17,16 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     @IBOutlet weak var PieChartView2: ARPieChart!
     @IBOutlet weak var LineGraphView: UIView!
 
+    //make array of these views
     @IBOutlet weak var pieChartCircleView11: UIView!
+    @IBOutlet weak var pieChartCircleView12: UIView!
+    @IBOutlet weak var pieChartCircleView13: UIView!
+    @IBOutlet weak var pieChartCircleView14: UIView!
 
+    @IBOutlet weak var pieChartCircleView21: UIView!
+    @IBOutlet weak var pieChartCircleView22: UIView!
+    @IBOutlet weak var pieChartCircleView23: UIView!
+    @IBOutlet weak var pieChartCircleView24: UIView!
 
 
     private var chart: Chart?
@@ -38,8 +46,19 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
 
         //might want to also do this in viewDidLayoutSubviews
         setupPieChart()
+        makeAllTheCircles()
 
-        makeCircleOnView(pieChartCircleView11, color: UIColor.redColor())
+    }
+
+    func makeAllTheCircles() {
+        makeCircleOnView(pieChartCircleView11, color: randomColor())
+        makeCircleOnView(pieChartCircleView12, color: randomColor())
+        makeCircleOnView(pieChartCircleView13, color: randomColor())
+        makeCircleOnView(pieChartCircleView14, color: randomColor())
+        makeCircleOnView(pieChartCircleView21, color: randomColor())
+        makeCircleOnView(pieChartCircleView22, color: randomColor())
+        makeCircleOnView(pieChartCircleView23, color: randomColor())
+        makeCircleOnView(pieChartCircleView24, color: randomColor())
     }
 
     func makeCircleOnView(view: UIView, color: UIColor) {
@@ -47,7 +66,7 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         let circleX = view.frame.width / 2
         let circleY = view.frame.height / 2
         //let radius = view.frame.width / 2
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: circleX,y: circleY), radius: CGFloat(0.5*circleX), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: circleX,y: circleY), radius: CGFloat(0.7*circleX), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
 
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = circlePath.CGPath
@@ -55,11 +74,11 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         //change the fill color
         shapeLayer.fillColor = color.CGColor
         //you can change the stroke color
-        shapeLayer.strokeColor = UIColor.redColor().CGColor
+        shapeLayer.strokeColor = color.CGColor
         //you can change the line width
-        shapeLayer.lineWidth = 3.0
+        shapeLayer.lineWidth = 1.0
 
-        pieChartCircleView11.layer.addSublayer(shapeLayer)
+        view.layer.addSublayer(shapeLayer)
     }
 
     func setupPieChart() {
