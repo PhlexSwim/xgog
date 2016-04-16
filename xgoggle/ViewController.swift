@@ -114,6 +114,15 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         setupLineChart()
     }
 
+    func makeArrayOfPoints() -> [([(Double, Double)], UIColor)] {
+
+        return [
+            (chartPoints: [(2.0, 10.6), (4.2, 5.1), (7.3, 3.0)], color: UIColor.redColor()),
+            (chartPoints: [(7.3, 3.0), (8.1, 5.5), (14.0, 8.0)], color: UIColor.blackColor()),
+            (chartPoints: [(2.0, 2.6), (4.2, 4.1), (7.3, 1.0), (8.1, 11.5), (14.0, 3.0)], color: UIColor.blueColor())
+        ]
+    }
+
     func setupLineChart() {
         //****janky fix bc if it takes too long to run it will even remove the chart we want
         self.LineGraphView.subviews.forEach({ $0.removeFromSuperview() })
@@ -122,17 +131,43 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         let chartSettings = ChartSettings()
         chartSettings.leading = 10
         chartSettings.top = 10
-        chartSettings.trailing = 10
+        chartSettings.trailing = 20
         chartSettings.bottom = 10
+
+        let chartLine2 = [
+            (chartPoints: [(2.0, 10.6), (4.2, 5.1), (7.3, 3.0)], color: UIColor.redColor()),
+            (chartPoints: [(7.3, 3.0), (8.1, 5.5), (14.0, 8.0)], color: UIColor.blackColor()),
+            (chartPoints: [(2.0, 2.6), (4.2, 4.1), (7.3, 1.0), (8.1, 11.5), (14.0, 3.0)], color: UIColor.blueColor())
+        ]
+        //**need function that calculates max and mins for axes
+        //**maybe even calculates what the chart should increment by
+        //let chartMaxHeight =
+
+        let chartLine1 = [
+            (chartPoints: [(0.0, 79.0), (20.0, 120.0)], color: UIColor.blueColor()),
+            (chartPoints: [(20.0, 120.0),(30.0, 136.0), (50.0, 158.0), (60, 170.0)], color: UIColor.yellowColor()),
+            (chartPoints: [(60.0, 170.0),(70.0,192.0), (90.0, 195.0), (100, 170.0)], color: UIColor.redColor()),
+            (chartPoints: [(100.0, 170.0),(110.0, 137.0)], color: UIColor.yellowColor())
+        ]
+
+
+
+
         let chartConfig = ChartConfigXY(
             //**fit ends of graph
             //ChartSettings.top: 20,
             //ChartSettings.trailing: 20
             chartSettings: chartSettings,
-            xAxisConfig: ChartAxisConfig(from: 2, to: 14, by: 2),
-            yAxisConfig: ChartAxisConfig(from: 0, to: 14, by: 2)
+            xAxisConfig: ChartAxisConfig(from: 0, to: 120, by: 15),
+            yAxisConfig: ChartAxisConfig(from: 60, to: 220, by: 30)
         )
         
+
+
+        //**Can adjust points in graph by appending -- for some reason doing it all in a function return isnt really working might have to pass more than just copy to make the change
+        //must use var instead of let for that
+        //chartLine1.append((chartPoints: [(9.0, 10.6), (4.2, 5.1), (7.3, 3.0)], color: UIColor.redColor()))
+
         let chart = LineChart(
             //this is a problem bc im setting height and width manually here
             frame: CGRectMake(10, 10, self.LineGraphView.frame.width-20, self.LineGraphView.frame.height-20),
@@ -140,12 +175,9 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
             chartConfig: chartConfig,
             xTitle: "Time",
             yTitle: "Heart Rate",
-            lines: [
-                (chartPoints: [(2.0, 10.6), (4.2, 5.1), (7.3, 3.0)], color: UIColor.redColor()),
-                (chartPoints: [(7.3, 3.0), (8.1, 5.5), (14.0, 8.0)], color: UIColor.blackColor()),
-                (chartPoints: [(2.0, 2.6), (4.2, 4.1), (7.3, 1.0), (8.1, 11.5), (14.0, 3.0)], color: UIColor.blueColor())
-            ]
+            lines: chartLine1
         )
+
         self.chart = chart
 
         self.LineGraphView.addSubview(chart.view)
