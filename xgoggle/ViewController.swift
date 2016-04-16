@@ -158,7 +158,7 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
             //ChartSettings.top: 20,
             //ChartSettings.trailing: 20
             chartSettings: chartSettings,
-            xAxisConfig: ChartAxisConfig(from: 0, to: 120, by: 20),
+            xAxisConfig: ChartAxisConfig(from: 0, to: 120, by: 120),
             yAxisConfig: ChartAxisConfig(from: 100, to: 220, by: 20)
         )
         
