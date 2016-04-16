@@ -144,10 +144,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         //let chartMaxHeight =
 
         let chartLine1 = [
-            (chartPoints: [(0.0, 79.0), (20.0, 120.0)], color: UIColor.blueColor()),
+            (chartPoints: [(0.0, 100.0), (20.0, 120.0)], color: UIColor.blueColor()),
             (chartPoints: [(20.0, 120.0),(30.0, 136.0), (50.0, 158.0), (60, 170.0)], color: UIColor.yellowColor()),
             (chartPoints: [(60.0, 170.0),(70.0,192.0), (90.0, 195.0), (100, 170.0)], color: UIColor.redColor()),
-            (chartPoints: [(100.0, 170.0),(110.0, 137.0)], color: UIColor.yellowColor())
+            (chartPoints: [(100.0, 170.0),(110.0, 137.0), (120, 120)], color: UIColor.yellowColor())
         ]
 
 
@@ -158,8 +158,8 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
             //ChartSettings.top: 20,
             //ChartSettings.trailing: 20
             chartSettings: chartSettings,
-            xAxisConfig: ChartAxisConfig(from: 0, to: 120, by: 15),
-            yAxisConfig: ChartAxisConfig(from: 60, to: 220, by: 30)
+            xAxisConfig: ChartAxisConfig(from: 0, to: 120, by: 20),
+            yAxisConfig: ChartAxisConfig(from: 100, to: 220, by: 20)
         )
         
 
