@@ -47,15 +47,16 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        self.colorWheel.append(UIColor(red: 127/255, green: 178/255, blue: 240/255, alpha: 1))
-        self.colorWheel.append(UIColor(red: 78/255, green: 122/255, blue: 199/255, alpha: 1))
-        self.colorWheel.append(UIColor(red: 30/255, green: 40/255, blue: 140/255, alpha: 1))
-        self.colorWheel.append(UIColor(red: 22/255, green: 25/255, blue: 59/255, alpha: 1))
 
         self.colorWheel.append(UIColor(red: 242/255, green: 155/255, blue: 48/255, alpha: 1))
         self.colorWheel.append(UIColor(red: 242/255, green: 107/255, blue: 29/255, alpha: 1))
         self.colorWheel.append(UIColor(red: 191/255, green: 44/255, blue: 11/255, alpha: 1))
         self.colorWheel.append(UIColor(red: 115/255, green: 2/255, blue: 2/255, alpha: 1))
+
+        self.colorWheel.append(UIColor(red: 127/255, green: 178/255, blue: 240/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 78/255, green: 122/255, blue: 199/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 30/255, green: 40/255, blue: 140/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 22/255, green: 25/255, blue: 59/255, alpha: 1))
 
         //might want to also do this in viewDidLayoutSubviews
         setupPieChart()

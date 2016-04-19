@@ -123,8 +123,8 @@ public class ARPieChart: UIView {
     func setDefaultValues() {
         contentView = UIView(frame: self.bounds)
         addSubview(contentView)
-        outerRadius = min(self.bounds.width, self.bounds.height) / 2.75
-        innerRadius = outerRadius / 2.75
+        outerRadius = min(self.bounds.width, self.bounds.height) / 2.2
+        innerRadius = outerRadius / 2.2
         selectedPieOffset = innerRadius / 2.0
     }
     
