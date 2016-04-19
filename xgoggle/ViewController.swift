@@ -38,11 +38,18 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     internal var showDescriptionText: Bool = false
     internal var animationDuration: Double = 1.0
 
+    var colorWheel = [UIColor]()
+
     var dataItems: NSMutableArray = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        self.colorWheel.append(UIColor(red: 242/255, green: 155/255, blue: 48/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 242/255, green: 107/255, blue: 29/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 191/255, green: 44/255, blue: 11/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 115/255, green: 2/255, blue: 2/255, alpha: 1))
 
         //might want to also do this in viewDidLayoutSubviews
         setupPieChart()
@@ -51,10 +58,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     }
 
     func makeAllTheCircles() {
-        makeCircleOnView(pieChartCircleView11, color: UIColor.blueColor())
-        makeCircleOnView(pieChartCircleView12, color: UIColor.yellowColor())
-        makeCircleOnView(pieChartCircleView13, color: UIColor.redColor())
-        makeCircleOnView(pieChartCircleView14, color: UIColor.purpleColor())
+        makeCircleOnView(pieChartCircleView11, color: self.colorWheel[0])
+        makeCircleOnView(pieChartCircleView12, color: self.colorWheel[1])
+        makeCircleOnView(pieChartCircleView13, color: self.colorWheel[2])
+        makeCircleOnView(pieChartCircleView14, color: self.colorWheel[3])
         makeCircleOnView(pieChartCircleView21, color: randomColor())
         makeCircleOnView(pieChartCircleView22, color: randomColor())
         makeCircleOnView(pieChartCircleView23, color: randomColor())
@@ -96,10 +103,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         // Random Default Value
         //let defaultItemCount = randomInteger(1, upper: 10)
         let defaultItemCount = 4
-        dataItems.addObject(PieChartItem(value: 2, color: UIColor.blueColor(), description: "\(2.0)"))
-        dataItems.addObject(PieChartItem(value: 2, color: UIColor.yellowColor(), description: "\(2.0)"))
-        dataItems.addObject(PieChartItem(value: 2, color: UIColor.redColor(), description: "\(2.0)"))
-        dataItems.addObject(PieChartItem(value: 2, color: UIColor.purpleColor(), description: "\(2.0)"))
+        dataItems.addObject(PieChartItem(value: 1, color: self.colorWheel[0], description: "\(1.0)"))
+        dataItems.addObject(PieChartItem(value: 3, color: self.colorWheel[1], description: "\(3.0)"))
+        dataItems.addObject(PieChartItem(value: 2, color: self.colorWheel[2], description: "\(2.0)"))
+        dataItems.addObject(PieChartItem(value: 5, color: self.colorWheel[3], description: "\(5.0)"))
 
 //        for _ in 1...defaultItemCount {
 //            dataItems.addObject(randomItem())
@@ -158,10 +165,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         //let chartMaxHeight =
 
         let chartLine1 = [
-            (chartPoints: [(0.0, 100.0), (20.0, 120.0)], color: UIColor.blueColor()),
-            (chartPoints: [(20.0, 120.0),(30.0, 136.0), (50.0, 158.0), (60, 170.0)], color: UIColor.yellowColor()),
-            (chartPoints: [(60.0, 170.0),(70.0,192.0), (90.0, 195.0), (100, 170.0)], color: UIColor.redColor()),
-            (chartPoints: [(100.0, 170.0),(110.0, 137.0), (120, 120)], color: UIColor.yellowColor())
+            (chartPoints: [(0.0, 100.0), (20.0, 120.0)], color: self.colorWheel[0]),
+            (chartPoints: [(20.0, 120.0),(30.0, 136.0), (50.0, 158.0), (60, 170.0)], color: self.colorWheel[1]),
+            (chartPoints: [(60.0, 170.0),(70.0,192.0), (90.0, 195.0), (100, 170.0)], color: self.colorWheel[2]),
+            (chartPoints: [(100.0, 170.0),(110.0, 137.0), (120, 120)], color: self.colorWheel[1])
         ]
 
 
