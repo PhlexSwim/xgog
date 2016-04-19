@@ -51,10 +51,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     }
 
     func makeAllTheCircles() {
-        makeCircleOnView(pieChartCircleView11, color: randomColor())
-        makeCircleOnView(pieChartCircleView12, color: randomColor())
-        makeCircleOnView(pieChartCircleView13, color: randomColor())
-        makeCircleOnView(pieChartCircleView14, color: randomColor())
+        makeCircleOnView(pieChartCircleView11, color: UIColor.blueColor())
+        makeCircleOnView(pieChartCircleView12, color: UIColor.yellowColor())
+        makeCircleOnView(pieChartCircleView13, color: UIColor.redColor())
+        makeCircleOnView(pieChartCircleView14, color: UIColor.purpleColor())
         makeCircleOnView(pieChartCircleView21, color: randomColor())
         makeCircleOnView(pieChartCircleView22, color: randomColor())
         makeCircleOnView(pieChartCircleView23, color: randomColor())
@@ -62,6 +62,8 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     }
 
     func makeCircleOnView(view: UIView, color: UIColor) {
+        //****janky fix bc if it takes too long to run it will even remove the chart we want
+        view.subviews.forEach({ $0.removeFromSuperview() })
         //need to calculate width and height of parent view to determine center point
         let circleX = view.frame.width / 2
         let circleY = view.frame.height / 2
