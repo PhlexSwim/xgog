@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		825388B56A82BEEE18C722C7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A68C6830F33AD27E4B90EA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9F25AEED1CB708E200062558 /* ARPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F25AEEC1CB708E200062558 /* ARPieChart.swift */; };
+		9F6EFAA81CC6CC3900112182 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EFAA71CC6CC3900112182 /* LineChart.swift */; };
 		9FE06B4D1CB65D9F006B9B1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE06B4C1CB65D9F006B9B1A /* AppDelegate.swift */; };
 		9FE06B4F1CB65D9F006B9B1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE06B4E1CB65D9F006B9B1A /* ViewController.swift */; };
 		9FE06B521CB65D9F006B9B1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE06B501CB65D9F006B9B1A /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		5522D98295F1EF47AAC7B34D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F25AEEC1CB708E200062558 /* ARPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPieChart.swift; sourceTree = "<group>"; };
+		9F6EFAA71CC6CC3900112182 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		9FE06B491CB65D9F006B9B1A /* xgoggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xgoggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE06B4C1CB65D9F006B9B1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FE06B4E1CB65D9F006B9B1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				9FE06B7A1CB66979006B9B1A /* view.png */,
 				9F25AEEC1CB708E200062558 /* ARPieChart.swift */,
 				9FE06B501CB65D9F006B9B1A /* Main.storyboard */,
+				9F6EFAA71CC6CC3900112182 /* LineChart.swift */,
 				9FE06B531CB65D9F006B9B1A /* Assets.xcassets */,
 				9FE06B551CB65D9F006B9B1A /* LaunchScreen.storyboard */,
 				9FE06B581CB65D9F006B9B1A /* Info.plist */,
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6EFAA81CC6CC3900112182 /* LineChart.swift in Sources */,
 				9FE06B4F1CB65D9F006B9B1A /* ViewController.swift in Sources */,
 				9FE06B4D1CB65D9F006B9B1A /* AppDelegate.swift in Sources */,
 				9F25AEED1CB708E200062558 /* ARPieChart.swift in Sources */,
