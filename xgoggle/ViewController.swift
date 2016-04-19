@@ -11,10 +11,10 @@
 import UIKit
 import SwiftCharts
 
-class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource {
+class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource, ARPieChart2Delegate, ARPieChart2DataSource {
 
     @IBOutlet weak var PieChartView: ARPieChart!
-    @IBOutlet weak var PieChartView2: ARPieChart!
+    @IBOutlet weak var PieChartView2: ARPieChart2!
     @IBOutlet weak var LineGraphView: UIView!
 
     //make array of these views
@@ -41,10 +41,16 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     var colorWheel = [UIColor]()
 
     var dataItems: NSMutableArray = []
+    var dataItems2: NSMutableArray = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        self.colorWheel.append(UIColor(red: 127/255, green: 178/255, blue: 240/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 78/255, green: 122/255, blue: 199/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 30/255, green: 40/255, blue: 140/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 22/255, green: 25/255, blue: 59/255, alpha: 1))
 
         self.colorWheel.append(UIColor(red: 242/255, green: 155/255, blue: 48/255, alpha: 1))
         self.colorWheel.append(UIColor(red: 242/255, green: 107/255, blue: 29/255, alpha: 1))
@@ -62,10 +68,10 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         makeCircleOnView(pieChartCircleView12, color: self.colorWheel[1])
         makeCircleOnView(pieChartCircleView13, color: self.colorWheel[2])
         makeCircleOnView(pieChartCircleView14, color: self.colorWheel[3])
-        makeCircleOnView(pieChartCircleView21, color: randomColor())
-        makeCircleOnView(pieChartCircleView22, color: randomColor())
-        makeCircleOnView(pieChartCircleView23, color: randomColor())
-        makeCircleOnView(pieChartCircleView24, color: randomColor())
+        makeCircleOnView(pieChartCircleView21, color: self.colorWheel[4])
+        makeCircleOnView(pieChartCircleView22, color: self.colorWheel[5])
+        makeCircleOnView(pieChartCircleView23, color: self.colorWheel[6])
+        makeCircleOnView(pieChartCircleView24, color: self.colorWheel[7])
     }
 
     func makeCircleOnView(view: UIView, color: UIColor) {
@@ -107,6 +113,11 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         dataItems.addObject(PieChartItem(value: 3, color: self.colorWheel[1], description: "\(3.0)"))
         dataItems.addObject(PieChartItem(value: 2, color: self.colorWheel[2], description: "\(2.0)"))
         dataItems.addObject(PieChartItem(value: 5, color: self.colorWheel[3], description: "\(5.0)"))
+
+        dataItems2.addObject(PieChartItem(value: 70, color: self.colorWheel[4], description: "\(70)"))
+        dataItems2.addObject(PieChartItem(value: 30, color: self.colorWheel[5], description: "\(30)"))
+        dataItems2.addObject(PieChartItem(value: 200, color: self.colorWheel[6], description: "\(200)"))
+        dataItems2.addObject(PieChartItem(value: 50, color: self.colorWheel[7], description: "\(50)"))
 
 //        for _ in 1...defaultItemCount {
 //            dataItems.addObject(randomItem())
@@ -201,6 +212,44 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     func pieChart(pieChart: ARPieChart, descriptionForSliceAtIndex index: Int) -> String {
         let item: PieChartItem = dataItems[index] as! PieChartItem
         return item.description ?? ""
+    }
+
+    /**
+     *   MARK: ARPieChart2DataSource
+     */
+    func numberOfSlicesInPieChart2(pieChart: ARPieChart2) -> Int {
+        return dataItems2.count
+    }
+
+    func pieChart2(pieChart: ARPieChart2, valueForSliceAtIndex index: Int) -> CGFloat {
+        let item: PieChartItem = dataItems2[index] as! PieChartItem
+        return item.value
+    }
+
+    func pieChart2(pieChart: ARPieChart2, colorForSliceAtIndex index: Int) -> UIColor {
+        let item: PieChartItem = dataItems2[index] as! PieChartItem
+        return item.color
+    }
+
+    func pieChart2(pieChart: ARPieChart2, descriptionForSliceAtIndex index: Int) -> String {
+        let item: PieChartItem = dataItems2[index] as! PieChartItem
+        return item.description ?? ""
+    }
+
+    // #Pie Chart implementation -- **should probably move this to its own file
+    // **watch out for aspect ratio thingymabob for pie charts when we go to resize them
+    /**
+     *  MARK: ARPieChartDelegate
+     */
+    func pieChart2(pieChart: ARPieChart2, itemSelectedAtIndex index: Int) {
+        //let itemSelected: PieChartItem = dataItems[index] as! PieChartItem
+        //selectionLabel.text = "Value: \(itemSelected.value)"
+        //selectionLabel.textColor = itemSelected.color
+    }
+
+    func pieChart2(pieChart: ARPieChart2, itemDeselectedAtIndex index: Int) {
+        //selectionLabel.text = "No Selection"
+        //selectionLabel.textColor = UIColor.blackColor()
     }
 
 
