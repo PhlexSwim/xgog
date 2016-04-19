@@ -94,10 +94,16 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         PieChartView2.showDescriptionText = true
         
         // Random Default Value
-        let defaultItemCount = randomInteger(1, upper: 10)
-        for _ in 1...defaultItemCount {
-            dataItems.addObject(randomItem())
-        }
+        //let defaultItemCount = randomInteger(1, upper: 10)
+        let defaultItemCount = 4
+        dataItems.addObject(PieChartItem(value: 2, color: UIColor.blueColor(), description: "\(2.0)"))
+        dataItems.addObject(PieChartItem(value: 2, color: UIColor.yellowColor(), description: "\(2.0)"))
+        dataItems.addObject(PieChartItem(value: 2, color: UIColor.redColor(), description: "\(2.0)"))
+        dataItems.addObject(PieChartItem(value: 2, color: UIColor.purpleColor(), description: "\(2.0)"))
+
+//        for _ in 1...defaultItemCount {
+//            dataItems.addObject(randomItem())
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -113,7 +119,13 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         setupLineChart()
+        self.chart!.view.frame = CGRectMake(10, 10, self.LineGraphView.frame.width-20, self.LineGraphView.frame.height-20)
     }
 
     func makeArrayOfPoints() -> [([(Double, Double)], UIColor)] {

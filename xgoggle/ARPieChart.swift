@@ -303,6 +303,7 @@ public class ARPieChart: UIView {
         textLayer.font = CGFontCreateWithFontName(labelFont.fontName)
         textLayer.fontSize = labelFont.pointSize
         textLayer.string = ""
+        textLayer.foregroundColor = UIColor.blackColor().CGColor
         
         if showDescriptionText && index >= 0 {
             textLayer.string = dataSource?.pieChart(self, descriptionForSliceAtIndex: index)
