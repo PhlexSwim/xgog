@@ -59,14 +59,16 @@
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="LineGraphView" translatesAutoresizingMaskIntoConstraints="NO" id="Uuy-ho-csD" userLabel="LineGraphView">
                                 <rect key="frame" x="10" y="67" width="580" height="233"/>
-                                <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efh-kK-YYN">
                                 <rect key="frame" x="10" y="30" width="580" height="25"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="JFe-j7-elF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUn-QA-jzE" userLabel="BottomHalfView">
@@ -74,7 +76,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" restorationIdentifier="PieChartView" translatesAutoresizingMaskIntoConstraints="NO" id="f3p-dR-C86" userLabel="PieChartView" customClass="ARPieChart" customModule="xgoggle" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="285" height="112"/>
-                                        <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="f3p-dR-C86" secondAttribute="height" multiplier="15:8" id="HcW-Gf-fzg" userLabel="aspect = 1:1"/>
                                         </constraints>
@@ -86,7 +88,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W80-F0-3rL" userLabel="PieChartView2" customClass="ARPieChart" customModule="xgoggle" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="121" width="285" height="112"/>
-                                        <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB8-Vf-AzL" userLabel="LabelsView1">
                                         <rect key="frame" x="295" y="0.0" width="285" height="112"/>
@@ -151,28 +153,32 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="aerobic" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-m5-klI">
-                                                <rect key="frame" x="36" y="36" width="215" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="fat burn" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7OE-09-7kz">
-                                                <rect key="frame" x="36" y="13" width="215" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="anaerobic" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="puH-6M-MS7">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Anaerobic" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="puH-6M-MS7">
                                                 <rect key="frame" x="36" y="59" width="214" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="max" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3hc-vx-YnB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Max" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3hc-vx-YnB">
                                                 <rect key="frame" x="36" y="81" width="214" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fat Burn" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7OE-09-7kz">
+                                                <rect key="frame" x="36" y="13" width="215" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Aerobic" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-m5-klI">
+                                                <rect key="frame" x="36" y="36" width="215" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="0Q9-QZ-TpE" firstAttribute="top" secondItem="om3-uY-FgW" secondAttribute="bottom" constant="5" id="0ao-1K-cr9"/>
                                             <constraint firstItem="3hc-vx-YnB" firstAttribute="centerX" secondItem="TB8-Vf-AzL" secondAttribute="centerX" id="0dM-uY-Ss5"/>
@@ -226,21 +232,25 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zw-Oy-uBY">
                                                 <rect key="frame" x="36" y="13" width="215" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="084-fs-u7a">
                                                 <rect key="frame" x="36" y="36" width="38" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAS-7o-tsj">
                                                 <rect key="frame" x="36" y="58" width="50" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVa-JQ-ig8">
                                                 <rect key="frame" x="36" y="81" width="34" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XNb-VZ-DZg">
@@ -272,7 +282,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="hbT-zP-SJB" firstAttribute="height" secondItem="zBb-G7-BnH" secondAttribute="height" id="1i9-9f-Pw8"/>
                                             <constraint firstItem="084-fs-u7a" firstAttribute="top" secondItem="4Zw-Oy-uBY" secondAttribute="bottom" constant="5" id="2YJ-em-2fk"/>
@@ -305,13 +315,13 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="xHo-aN-xjp"/>
                                                 <exclude reference="cRA-fY-L8a"/>
+                                                <exclude reference="xHo-aN-xjp"/>
                                             </mask>
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="f3p-dR-C86" firstAttribute="height" secondItem="W80-F0-3rL" secondAttribute="height" id="4So-Ag-4Sc"/>
                                     <constraint firstItem="TB8-Vf-AzL" firstAttribute="top" secondItem="lUn-QA-jzE" secondAttribute="top" id="4YY-s2-jV6"/>
@@ -344,7 +354,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Uuy-ho-csD" firstAttribute="leading" secondItem="G4W-Ts-p81" secondAttribute="leading" constant="10" id="24Y-j3-06p"/>
                             <constraint firstItem="lUn-QA-jzE" firstAttribute="top" secondItem="Uuy-ho-csD" secondAttribute="bottom" constant="10" id="Huu-mf-DB3"/>
@@ -359,7 +369,7 @@
                             <constraint firstAttribute="trailing" secondItem="lUn-QA-jzE" secondAttribute="trailing" constant="10" id="kk6-oH-qqo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Overview" id="Xfy-8A-Wum"/>
+                    <tabBarItem key="tabBarItem" title="Overview" image="first" selectedImage="first" id="Xfy-8A-Wum"/>
                     <connections>
                         <outlet property="LineGraphView" destination="Uuy-ho-csD" id="Ql5-Rx-am5"/>
                         <outlet property="PieChartView" destination="f3p-dR-C86" id="Hwp-UY-ucH"/>
@@ -398,4 +408,7 @@
             <point key="canvasLocation" x="-508" y="-271"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
 </document>
