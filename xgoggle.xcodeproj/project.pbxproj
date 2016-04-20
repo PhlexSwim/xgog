@@ -11,6 +11,8 @@
 		9F25AEED1CB708E200062558 /* ARPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F25AEEC1CB708E200062558 /* ARPieChart.swift */; };
 		9F6EFAA81CC6CC3900112182 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EFAA71CC6CC3900112182 /* LineChart.swift */; };
 		9F6EFAAC1CC6DBCD00112182 /* ARPieChart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EFAAB1CC6DBCD00112182 /* ARPieChart2.swift */; };
+		9F6EFAAE1CC6EADC00112182 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EFAAD1CC6EADC00112182 /* Env.swift */; };
+		9F6EFAB01CC6EB1800112182 /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EFAAF1CC6EB1800112182 /* ExamplesDefaults.swift */; };
 		9FE06B4D1CB65D9F006B9B1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE06B4C1CB65D9F006B9B1A /* AppDelegate.swift */; };
 		9FE06B4F1CB65D9F006B9B1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE06B4E1CB65D9F006B9B1A /* ViewController.swift */; };
 		9FE06B521CB65D9F006B9B1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE06B501CB65D9F006B9B1A /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		9F25AEEC1CB708E200062558 /* ARPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPieChart.swift; sourceTree = "<group>"; };
 		9F6EFAA71CC6CC3900112182 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		9F6EFAAB1CC6DBCD00112182 /* ARPieChart2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPieChart2.swift; sourceTree = "<group>"; };
+		9F6EFAAD1CC6EADC00112182 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		9F6EFAAF1CC6EB1800112182 /* ExamplesDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
 		9FE06B491CB65D9F006B9B1A /* xgoggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xgoggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE06B4C1CB65D9F006B9B1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FE06B4E1CB65D9F006B9B1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				9F6EFAAB1CC6DBCD00112182 /* ARPieChart2.swift */,
 				9FE06B501CB65D9F006B9B1A /* Main.storyboard */,
 				9F6EFAA71CC6CC3900112182 /* LineChart.swift */,
+				9F6EFAAF1CC6EB1800112182 /* ExamplesDefaults.swift */,
+				9F6EFAAD1CC6EADC00112182 /* Env.swift */,
 				9FE06B531CB65D9F006B9B1A /* Assets.xcassets */,
 				9FE06B551CB65D9F006B9B1A /* LaunchScreen.storyboard */,
 				9FE06B581CB65D9F006B9B1A /* Info.plist */,
@@ -347,7 +353,9 @@
 				9F6EFAA81CC6CC3900112182 /* LineChart.swift in Sources */,
 				9FE06B4F1CB65D9F006B9B1A /* ViewController.swift in Sources */,
 				9F6EFAAC1CC6DBCD00112182 /* ARPieChart2.swift in Sources */,
+				9F6EFAAE1CC6EADC00112182 /* Env.swift in Sources */,
 				9FE06B4D1CB65D9F006B9B1A /* AppDelegate.swift in Sources */,
+				9F6EFAB01CC6EB1800112182 /* ExamplesDefaults.swift in Sources */,
 				9F25AEED1CB708E200062558 /* ARPieChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
