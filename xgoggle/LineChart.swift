@@ -36,6 +36,7 @@ func setupLineChart(view: UIView, colorWheel: [UIColor]) -> Chart?{
         (chartPoints: [(100.0, 170.0),(110.0, 137.0), (120, 120)], color: colorWheel[1])
     ]
     
+    //***CHANGE COLORS OF LINE CHART HERE
     let chartConfig = ChartConfigXY(
         //**fit ends of graph
         //ChartSettings.top: 20,

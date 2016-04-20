@@ -47,16 +47,17 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-
+        //***CHANGE COLORS HERE
+        //LINE CHART+FIRST PIE CHART
         self.colorWheel.append(UIColor(red: 242/255, green: 155/255, blue: 48/255, alpha: 1))
         self.colorWheel.append(UIColor(red: 242/255, green: 107/255, blue: 29/255, alpha: 1))
         self.colorWheel.append(UIColor(red: 191/255, green: 44/255, blue: 11/255, alpha: 1))
         self.colorWheel.append(UIColor(red: 115/255, green: 2/255, blue: 2/255, alpha: 1))
-        
+        //SECOND PIE CHART
         self.colorWheel.append(UIColor(red: 127/255, green: 178/255, blue: 240/255, alpha: 1))
         self.colorWheel.append(UIColor(red: 78/255, green: 122/255, blue: 199/255, alpha: 1))
-        self.colorWheel.append(UIColor(red: 30/255, green: 40/255, blue: 140/255, alpha: 1))
-        self.colorWheel.append(UIColor(red: 22/255, green: 25/255, blue: 59/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 50/255, green: 90/255, blue: 140/255, alpha: 1))
+        self.colorWheel.append(UIColor(red: 30/255, green: 60/255, blue: 110/255, alpha: 1))
 
         //might want to also do this in viewDidLayoutSubviews
         setupPieChart()
@@ -107,9 +108,7 @@ class ViewController: UIViewController, ARPieChartDelegate, ARPieChartDataSource
         PieChartView2.dataSource = self
         PieChartView2.showDescriptionText = true
         
-        // Random Default Value
-        //let defaultItemCount = randomInteger(1, upper: 10)
-        let defaultItemCount = 4
+        //***DUMMY DATA FOR PIECHARTS HERE
         dataItems.addObject(PieChartItem(value: 1, color: self.colorWheel[0], description: "\(1.0)"))
         dataItems.addObject(PieChartItem(value: 3, color: self.colorWheel[1], description: "\(3.0)"))
         dataItems.addObject(PieChartItem(value: 2, color: self.colorWheel[2], description: "\(2.0)"))
